@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carla Renata Pinto | Cabelo, Manicure e Pedicure</title>
+<meta name="facebook-domain-verification" content="tq3emehbu4b1a3jwx6jpqbc0lri32k" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF6F3;
+    --surface:#FFFFFF;
+    --plum:#2E1A24;
+    --plum-soft:#5C3D4A;
+    --rose:#C24A6E;
+    --rose-deep:#9C3555;
+    --blush:#F4E3E6;
+    --gold:#C79A5C;
+    --border:#EAD9D0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Inter',sans-serif;
+    color:var(--plum);
+    background:var(--bg);
+    line-height:1.65;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;color:var(--plum);}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
+
+  .hero{
+    background:linear-gradient(180deg,var(--blush) 0%, var(--bg) 100%);
+    padding:88px 24px 100px;
+    text-align:center;
+    position:relative;
+  }
+  .eyebrow{
+    font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose-deep);
+    font-weight:600;margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(36px,6vw,58px);line-height:1.08;margin-bottom:18px;}
+  .hero h1 em{color:var(--rose);font-style:italic;}
+  .hero .sub{font-size:18px;color:var(--plum-soft);max-width:520px;margin:0 auto 34px;}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;
+    font-size:15px;font-weight:600;text-decoration:none;transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--rose);color:#fff;}
+  .btn-secondary{background:var(--surface);color:var(--plum);border:1px solid var(--border);}
+
+  .divider{
+    width:100%;height:40px;overflow:hidden;line-height:0;
+  }
+  .divider svg{width:100%;height:100%;display:block;}
+
+  section{padding:72px 0;}
+  .kicker{
+    font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose-deep);
+    font-weight:600;margin-bottom:10px;
+  }
+  section h2{font-size:32px;margin-bottom:16px;}
+  .lead{color:var(--plum-soft);font-size:16px;max-width:600px;margin-bottom:12px;}
+
+  .services-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;
+  }
+  @media (max-width:720px){.services-grid{grid-template-columns:1fr;}}
+  .service-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:28px 24px;
+  }
+  .service-card .num{
+    font-family:'Fraunces',serif;font-size:14px;color:var(--gold);font-weight:600;
+    margin-bottom:14px;display:block;
+  }
+  .service-card h3{font-size:19px;margin-bottom:8px;}
+  .service-card p{font-size:14px;color:var(--plum-soft);}
+
+  .about{
+    background:var(--surface);border-radius:24px;padding:48px;
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  }
+  @media (max-width:720px){.about{grid-template-columns:1fr;padding:32px 24px;}}
+  .about-stats{display:flex;gap:32px;margin-top:24px;flex-wrap:wrap;}
+  .stat .n{font-family:'Fraunces',serif;font-size:30px;color:var(--rose);}
+  .stat .l{font-size:13px;color:var(--plum-soft);}
+  .about-quote{
+    background:var(--blush);border-radius:18px;padding:32px;font-family:'Fraunces',serif;
+    font-size:19px;font-style:italic;color:var(--plum);
+  }
+  .about-quote span{display:block;margin-top:16px;font-family:'Inter',sans-serif;font-style:normal;font-size:13px;color:var(--rose-deep);font-weight:600;}
+
+  .contact-grid{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:32px;margin-top:32px;
+  }
+  @media (max-width:720px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:32px;
+  }
+  .info-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);}
+  .info-row:last-child{border-bottom:none;}
+  .info-icon{
+    width:36px;height:36px;border-radius:50%;background:var(--blush);color:var(--rose-deep);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:600;
+  }
+  .info-row .info-label{font-size:12px;color:var(--plum-soft);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
+  .info-row .info-value{font-size:15px;color:var(--plum);font-weight:500;}
+  .map-card{
+    background:var(--plum);border-radius:18px;padding:32px;color:#fff;
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .map-card h3{color:#fff;font-size:20px;margin-bottom:10px;}
+  .map-card p{color:#D9C6CE;font-size:14px;margin-bottom:20px;}
+
+  .legal{
+    background:var(--surface);border-top:1px solid var(--border);padding:48px 0 32px;
+  }
+  .legal-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:12px 40px;font-size:14px;
+  }
+  @media (max-width:600px){.legal-grid{grid-template-columns:1fr;}}
+  .legal-item{padding:10px 0;border-bottom:1px solid var(--border);}
+  .legal-item .l{color:var(--plum-soft);font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px;}
+  .legal-item .v{color:var(--plum);font-weight:500;}
+  .copyright{margin-top:32px;font-size:13px;color:var(--plum-soft);text-align:center;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Várzea Paulista &middot; SP</div>
+    <h1>Cabelo, manicure e<br><em>pedicure</em> com cuidado</h1>
+    <p class="sub">Atendimento individual de Carla Renata Pinto, pensado para deixar você em dia com sua beleza sem sair do bairro.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/5531984608461">Chamar no WhatsApp</a>
+      <a class="btn btn-secondary" href="#contato">Ver endereço</a>
+    </div>
+  </div>
+</div>
+
+<div class="divider">
+  <svg viewBox="0 0 1000 40" preserveAspectRatio="none"><path d="M0,20 C150,45 350,-5 500,20 C650,45 850,-5 1000,20 L1000,0 L0,0 Z" fill="#FBF6F3"></path></svg>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Serviços</div>
+    <h2>O que a Carla faz por você</h2>
+    <p class="lead">Atendimento individual, sem pressa, focado em deixar unhas e cabelo do seu jeito.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="num">01</span>
+        <h3>Cabelo</h3>
+        <p>Corte, escova e tratamentos, com atendimento personalizado para cada tipo de cabelo.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">02</span>
+        <h3>Manicure</h3>
+        <p>Cutilagem, esmaltação e cuidados completos para unhas sempre bem cuidadas.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">03</span>
+        <h3>Pedicure</h3>
+        <p>Higienização, hidratação e esmaltação para pés saudáveis e bonitos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <div class="kicker">Sobre</div>
+        <h2>Atendimento de confiança desde 2023</h2>
+        <p class="lead">Empresa individual registrada, atuando no ramo de cabeleireiros, manicure e pedicure em Várzea Paulista e região. Cada atendimento é feito com atenção aos detalhes e cuidado com cada cliente.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="n">2023</div>
+            <div class="l">Início das atividades</div>
+          </div>
+          <div class="stat">
+            <div class="n">SP</div>
+            <div class="l">Várzea Paulista</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-quote">
+        "Cada cliente merece um atendimento pensado só para ela."
+        <span>CARLA RENATA PINTO</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="wrap">
+    <div class="kicker">Contato</div>
+    <h2>Fale ou venha nos visitar</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="info-row">
+          <div class="info-icon">@</div>
+          <div>
+            <div class="info-label">E-mail</div>
+            <div class="info-value">carlarenatamaioli@gmail.com</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">&#9742;</div>
+          <div>
+            <div class="info-label">Telefone / WhatsApp</div>
+            <div class="info-value">(31) 98460-8461</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">&#9679;</div>
+          <div>
+            <div class="info-label">Endereço</div>
+            <div class="info-value">R Dois, J01 &middot; Condomínio Chacur<br>Várzea Paulista/SP &middot; CEP 13223-202</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-card">
+        <div>
+          <h3>Várzea Paulista, SP</h3>
+          <p>Atendimento no Condomínio Chacur, Rua Dois. Combine o horário pelo WhatsApp antes de vir.</p>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/5531984608461" style="justify-content:center;">Agendar horário</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="legal">
+  <div class="wrap">
+    <div class="kicker">Dados da empresa</div>
+    <div class="legal-grid">
+      <div class="legal-item">
+        <div class="l">Razão social</div>
+        <div class="v">50.379.535 Carla Renata Pinto</div>
+      </div>
+      <div class="legal-item">
+        <div class="l">CNPJ</div>
+        <div class="v">50.379.535/0001-93</div>
+      </div>
+      <div class="legal-item">
+        <div class="l">Natureza jurídica</div>
+        <div class="v">Empresário Individual</div>
+      </div>
+      <div class="legal-item">
+        <div class="l">Atividade principal</div>
+        <div class="v">Cabeleireiros, manicure e pedicure</div>
+      </div>
+      <div class="legal-item">
+        <div class="l">Data de abertura</div>
+        <div class="v">19/04/2023</div>
+      </div>
+      <div class="legal-item">
+        <div class="l">Situação cadastral</div>
+        <div class="v">Ativa</div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;">
+      <div class="kicker">Política de privacidade</div>
+      <p class="lead">50.379.535 Carla Renata Pinto respeita a privacidade de seus clientes. As informações coletadas por meio deste site são utilizadas exclusivamente para fins de contato e agendamento de serviços, não sendo compartilhadas com terceiros sem consentimento, exceto quando exigido por lei.</p>
+    </div>
+
+    <p class="copyright">&copy; 2026 50.379.535 Carla Renata Pinto &middot; CNPJ 50.379.535/0001-93. Todos os direitos reservados.</p>
+  </div>
+</div>
+
+</body>
+</html>
